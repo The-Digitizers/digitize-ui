@@ -1,10 +1,11 @@
 {
   "name": "@digitize-ui/components",
   "version": "0.0.1",
-  "description": "",
+  "description": "a description",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
+  "publishConfig": {"access": "public"},
   "sideEffects": false,
   "scripts": {
     "dev": "tsup src/index.ts --format esm,cjs --watch --dts",
