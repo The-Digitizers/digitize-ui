@@ -23,3 +23,9 @@ Once you've made the changes you'd like to make, a changeset will need to be gen
 `Changesets` will only monitor anything in the `/packages` directory (apart from `tsconfig`, which isn't published) so it will only prompt you to increment versions for packages you've changed. 
 
 Once you've generated your changeset, push it up to your feature branch and submit a PR! 
+
+## Releasing
+
+I am still ironing this process out. I'd like the releases to be automatic, but my CI/CD skills aren't the best. I did create a job to automate releases that appears to be working, but it isn't...
+
+For now, `yarn changeset version` needs to be run, which will check all changeset files, figure out how to increment package versions, and create changeset files inside of the packages. Afterwards, you can `yarn run release` to actually publish to `npm` but I'm sure there's a better way to handle it. Especially since you'll need to pull changes into `main` before running `yarn changeset version` which means you'll end up with the new changeset files on `main`, which can't be commited since you're on `main` and I don't want to break rules. Maybe we should do all releases in a `release` branch and then merge to `main`? Beats me but I'm tired and not thinking straight enough to fix it now, but I'll fix it eventually :)
