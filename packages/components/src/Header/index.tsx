@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Button } from "@mui/joy";
+import { Button, Sheet } from "@mui/joy";
 
 export const Header = () => {
 
@@ -9,9 +9,9 @@ export const Header = () => {
   }, [isOpen]);
 
   return (
-    <div>
+    <Sheet>
       <h1>This is a Header</h1>
       <Button onClick={(state) => setIsOpen(!state)}></Button>
-    </div>
+    </Sheet>
   )
 }
