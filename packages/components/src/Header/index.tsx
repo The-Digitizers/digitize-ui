@@ -14,4 +14,4 @@ export const Header = () => {
       <Button onClick={(state) => setIsOpen(!state)}></Button>
     </Sheet>
   )
-}
+};
