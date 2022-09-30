@@ -10,7 +10,7 @@ export const Footer = () => {
 
   return (
     <Sheet>
-      <h1>This is a Footer</h1>
+      <h1>This is a Test Footer</h1>
       <Button onClick={(state) => setIsOpen(!state)}></Button>
     </Sheet>
   )
