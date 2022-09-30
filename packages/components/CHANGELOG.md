@@ -1,5 +1,11 @@
 # @digitize-ui/components
 
+## 0.3.1
+
+### Patch Changes
+
+- [#16](https://github.com/The-Digitizers/digitize-ui/pull/16) [`6799b70`](https://github.com/The-Digitizers/digitize-ui/commit/6799b706b6af526380ba7ba7cc865f4c37074c68) Thanks [@trent-ungard](https://github.com/trent-ungard)! - changed text in footer
+
 ## 0.3.0
 
 ### Minor Changes
