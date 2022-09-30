@@ -5,6 +5,7 @@
 ### Minor Changes
 
 - [#9](https://github.com/The-Digitizers/digitize-ui/pull/9) [`8abe300`](https://github.com/The-Digitizers/digitize-ui/commit/8abe3000fbce3819ed4cb652abed42f1ea412d1c) Thanks [@trent-ungard](https://github.com/trent-ungard)! - Added modal
+
 ## 0.1.1
 
 ### Patch Changes
