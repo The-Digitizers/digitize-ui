@@ -1,5 +1,11 @@
 # @digitize-ui/components
 
+## 0.3.0
+
+### Minor Changes
+
+- [#14](https://github.com/The-Digitizers/digitize-ui/pull/14) [`a548353`](https://github.com/The-Digitizers/digitize-ui/commit/a54835368473907688ad6d3740a7ad77b7794bf7) Thanks [@trent-ungard](https://github.com/trent-ungard)! - footer
+
 ## 0.2.0
 
 ### Minor Changes
