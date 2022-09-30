@@ -32,4 +32,4 @@ jobs:
           publish: yarn release
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }} # set up under GitHub secrets
-          NPM_TOKEN: ${{ secrets.NH_TOKEN }} # Set up under GitHub secrets
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }} # Set up under GitHub secrets
