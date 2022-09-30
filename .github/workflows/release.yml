@@ -15,10 +15,11 @@ jobs:
           # This makes action fetch all Git history so that Changesets can generate changelogs with the correct commits
           fetch-depth: 0
 
-      - name: Use Node.js 14.x
-        uses: actions/setup-node@v1
+      - name: Use Node.js 16.x
+        uses: actions/setup-node@v2
         with:
-          version: 14.x
+          node-version: 16.x
+          registry-url: 'https://registry.npmjs.org'
 
       - name: Install Dependencies
         run: yarn
@@ -26,7 +27,7 @@ jobs:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }} # set up under GitHub secrets
 
       - name: Create Release Pull Request or Publish to npm
-        uses: changesets/action@master
+        uses: changesets/action@main
         with:
           publish: yarn release
         env:
