@@ -10,8 +10,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Checkout project repository
-      - name: Checkout
       - uses: actions/checkout@v2
         with:
           # This makes action fetch all Git history so that Changesets can generate changelogs with the correct commits
@@ -34,4 +32,4 @@ jobs:
           publish: yarn release
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }} # set up under GitHub secrets
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }} # Set up under GitHub secrets
+          NODE_AUTH_TOKEN: ${{ secrets.NH_TOKEN }} # Set up under GitHub secrets
