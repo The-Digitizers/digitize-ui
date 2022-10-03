@@ -26,6 +26,13 @@ Once you've generated your changeset, push it up to your feature branch and subm
 
 ## Releasing
 
-I am still ironing this process out. I'd like the releases to be automatic, but my CI/CD skills aren't the best. I did create a job to automate releases that appears to be working, but it isn't...
+When your branch is merged, if it includes a *changeset* file(s) an Action will be triggered to automatically create a Pull
+Request that will do our release when merged to **main**. Once this Pull Requst is approved, the action will run and so long as it is successful a new release to the NPM registry will be published. So the workflow loosely looks like this
 
-For now, `yarn changeset version` needs to be run, which will check all changeset files, figure out how to increment package versions, and create changeset files inside of the packages. Afterwards, you can `yarn run release` to actually publish to `npm` but I'm sure there's a better way to handle it. Especially since you'll need to pull changes into `main` before running `yarn changeset version` which means you'll end up with the new changeset files on `main`, which can't be commited since you're on `main` and I don't want to break rules. Maybe we should do all releases in a `release` branch and then merge to `main`? Beats me but I'm tired and not thinking straight enough to fix it now, but I'll fix it eventually :)
+1. You make your changes locally in a feature branch (see above)
+2. You generate a changeset when done
+3. You push to GitHub and create a Pull Request to main (or another branch if applicable)
+4. I will code review before merging to main
+5. Once merged, a seperate PR will be created automatically, which will be responsible for releasing to NPM when I approve
+6. I approve
+7. Changes are published to NPM
